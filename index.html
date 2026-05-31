@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Harness Design — A Manifesto</title>
+  <meta name="description" content="Harness Design is a discipline for directing artificial intelligence in product design. A working manifesto shaped by practice." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Harness Design — A Manifesto" />
+  <meta property="og:description" content="The force is in the machine. The judgment remains human." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theharnessdesign.com" />
+  <meta property="og:image" content="https://theharnessdesign.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Harness Design — A Manifesto" />
+  <meta name="twitter:description" content="The force is in the machine. The judgment remains human." />
+  <meta name="twitter:image" content="https://theharnessdesign.com/og.png" />
+
+  <link rel="canonical" href="https://theharnessdesign.com" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #1a1a1a;
+      --text-muted: #666666;
+      --text-faint: #999999;
+      --rule: #e0e0e0;
+      --max-width: 660px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background-color: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--bg);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    /* ── Header ── */
+
+    .site-header {
+      margin-bottom: 5rem;
+    }
+
+    .site-name {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      line-height: 1;
+    }
+
+    .site-definition {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-top: 0.6rem;
+    }
+
+    /* ── Manifesto ── */
+
+    .manifesto-title {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+      margin-bottom: 2rem;
+    }
+
+    .manifesto-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .manifesto-section p {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.75;
+      max-width: 66ch;
+    }
+
+    .manifesto-section p + p {
+      margin-top: 1.25rem;
+    }
+
+    .manifesto-section p:first-child {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    .manifesto-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    /* ── Coda ── */
+
+    .coda {
+      text-align: center;
+      margin-top: 4rem;
+      margin-bottom: 0;
+    }
+
+    .coda p {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 16px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    .coda p + p {
+      margin-top: 1rem;
+    }
+
+    /* ── Authorship note ── */
+
+    .authorship {
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .authorship p {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-faint);
+      line-height: 1.7;
+      max-width: 52ch;
+      margin: 0 auto;
+    }
+
+    /* ── Footer ── */
+
+    .site-footer {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .site-footer p {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-faint);
+    }
+
+    /* ── Mobile ── */
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 3rem 1.25rem;
+      }
+
+      .site-header {
+        margin-bottom: 4rem;
+      }
+
+      .manifesto-section p {
+        font-size: 16px;
+      }
+
+      .manifesto-section p:first-child {
+        font-size: 19px;
+      }
+
+      .manifesto-title {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="page">
+
+    <!-- Header -->
+    <header class="site-header">
+      <p class="site-name">Harness Design</p>
+      <p class="site-definition">A discipline for directing artificial intelligence in product design.</p>
+    </header>
+
+    <!-- Manifesto -->
+    <article>
+
+      <h1 class="manifesto-title">Harness Design — a manifesto</h1>
+
+      <section class="manifesto-section">
+        <p>Designers have always worked in the middle of chaos. That is the job.</p>
+        <p>Product design crosses domains that rarely speak to each other. Designers need to understand enough engineering to talk with the people building the system, enough business to talk with the people deciding what should exist, and enough human behavior to anticipate what users need before they know how to ask for it. After all of that, they still need to produce something that works: a concrete form, within the real constraints of the system, the business, and the people it serves.</p>
+        <p>The ability to synthesize such different domains into something that functions is not a secondary skill in design. It is the reason design exists.</p>
+      </section>
+
+      <hr class="manifesto-rule" />
+
+      <section class="manifesto-section">
+        <p>Every era brought a new force that reorganized the work.</p>
+        <p>Designers learned to work with machines, with pixels, with flows, with gestures. Each new force brought a new language. And designers learned each one without losing what the work has always required: understand the problem and produce something that makes sense for the people who will use it.</p>
+        <p>In each transition, part of the work was absorbed by the new force. What remained always moved closer to what actually defines the profession: read the problem with depth and turn that reading into something concrete. Artificial intelligence does not break this pattern. It intensifies it.</p>
+      </section>
+
+      <hr class="manifesto-rule" />
+
+      <section class="manifesto-section">
+        <p>AI produces at a speed and scale no human can match. It generates interfaces, copy, flows, prototypes, code. It does in seconds what used to take days. And it will keep getting better.</p>
+        <p>But generating is not the same as knowing what is worth generating. AI operates on what has been said, what has been documented, what has been structured. What the user feels but never says, what the business learned but never wrote down, what makes a technically correct solution wrong for that specific context — none of that makes it in. Maybe one day it will. But even if that changes, one question remains: who answers for what was produced?</p>
+        <p>Accountability is not a technical capability. It is a position someone has to occupy.</p>
+      </section>
+
+      <hr class="manifesto-rule" />
+
+      <section class="manifesto-section">
+        <p>Designers have always worked to give form to intention — the intention of a business, a user, a context. With AI, that work moves up a level: before producing the form, designers need to structure what AI must know to arrive at the right form.</p>
+        <p>Harness Design is that discipline. Designers build the conditions for good production to happen: the context AI needs to understand, the criteria it needs to respect, the decisions that have already been made and cannot be ignored. The force is in the machine. The judgment about what to do with it remains human. And when something goes wrong, the person who answers is the one who understands what should have happened. That person is the designer.</p>
+      </section>
+
+      <hr class="manifesto-rule" />
+
+      <section class="manifesto-section">
+        <p>Some of the work designers do today will be absorbed by AI. It is the same movement that happened in every previous transition, and there is no reason to believe this time will be different.</p>
+        <p>What remains is the judgment built over years of working with real problems, real users, and businesses that change direction midway through. The ability to notice what is wrong when everything seems right. To recognize when a generated solution is coherent but does not actually serve that specific problem. That does not transfer to a system that has never lived with the consequences of what it produced.</p>
+      </section>
+
+      <hr class="manifesto-rule" />
+
+      <section class="manifesto-section">
+        <p>In every new era, design learns to work with a new force. The move has always been to hold the direction.</p>
+      </section>
+
+      <!-- Coda -->
+      <div class="coda">
+        <p>Who does this serve?<br />And at what cost?</p>
+        <p>These questions existed before any technology.<br />And they will still be here after.</p>
+      </div>
+
+    </article>
+
+    <!-- Authorship note -->
+    <div class="authorship">
+      <p>This manifesto emerged from the practice of designers and product leaders working with artificial intelligence in real teams, on real problems. It is a working document — shaped by experience, open to revision as the practice evolves.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>© 2026 Harness Design</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
